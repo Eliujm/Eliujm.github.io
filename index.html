@@ -436,149 +436,160 @@
         <div class="projects-container">
 
 
-            <!-- PROJECT 1 -->
+     ```html
+<!-- PROJECTS -->
 
-            <article class="project-card">
+<section id="projects">
 
-                <h3>ReActiva</h3>
+    <h2 class="section-title">Projects</h2>
 
-                <p>
-                    Machine learning recommendation system designed
-                    to generate personalized product recommendations
-                    based on customer behavior and contextual
-                    characteristics.
-                </p>
+    <div class="projects-container">
 
-                <ul>
+                <!-- PROJECT 1 -->
+        
+                <article class="project-card">
+        
+                    <h3>ReActiva</h3>
+        
+                    <p>
+                        Machine learning recommendation system designed
+                        to generate personalized product recommendations
+                        based on customer behavior and contextual
+                        characteristics.
+                    </p>
+        
+                    <ul>
+        
+                        <li>
+                            Built a similarity-based recommendation
+                            approach using customer and transaction data.
+                        </li>
+        
+                        <li>
+                            Developed a fallback strategy based on
+                            location and best-selling products.
+                        </li>
+        
+                        <li>
+                            Built a Streamlit application to expose the
+                            recommendations.
+                        </li>
+        
+                        <li>
+                            Containerized the application using Docker.
+                        </li>
+        
+                        <li>
+                            Designed an AWS architecture involving
+                            S3, Lambda, ECR and EventBridge.
+                        </li>
+        
+                    </ul>
+        
+                    <div class="tech-stack">
+        
+                        <span class="tech">Python</span>
+                        <span class="tech">Machine Learning</span>
+                        <span class="tech">Streamlit</span>
+                        <span class="tech">Docker</span>
+                        <span class="tech">AWS</span>
+                        <span class="tech">S3</span>
+                        <span class="tech">Lambda</span>
+                        <span class="tech">ECR</span>
+                        <span class="tech">EventBridge</span>
+        
+                    </div>
+        
+                    <div class="project-links">
+        
+                        <a
+                            href="https://github.com/YOUR_USERNAME/reactiva"
+                            target="_blank">
+                            GitHub
+                        </a>
+        
+                    </div>
+        
+                </article>
+        
+        
+                <!-- PROJECT 2 -->
+        
+                <article class="project-card">
+        
+                    <h3>Customer Churn Prediction</h3>
+        
+                    <p>
+                        Machine learning project focused on predicting
+                        customer churn and evaluating whether historical
+                        customer behavior could provide enough information
+                        to identify customers at risk of leaving.
+                    </p>
+        
+                    <ul>
+        
+                        <li>
+                            Performed data preprocessing and exploratory
+                            analysis to identify relevant patterns and
+                            variables.
+                        </li>
+        
+                        <li>
+                            Built and evaluated machine learning models
+                            for churn prediction.
+                        </li>
+        
+                        <li>
+                            Used Optuna for hyperparameter optimization.
+                        </li>
+        
+                        <li>
+                            Used MLflow to track experiments, parameters
+                            and model performance.
+                        </li>
+        
+                        <li>
+                            Deployed the model through a Streamlit
+                            application for interactive predictions.
+                        </li>
+        
+                        <li>
+                            Evaluation showed that the model did not achieve
+                            the predictive performance required for reliable
+                            deployment.
+                        </li>
+        
+                    </ul>
+        
+                    <div class="tech-stack">
+        
+                        <span class="tech">Python</span>
+                        <span class="tech">Machine Learning</span>
+                        <span class="tech">Scikit-learn</span>
+                        <span class="tech">Optuna</span>
+                        <span class="tech">MLflow</span>
+                        <span class="tech">Streamlit</span>
+                        <span class="tech">Pandas</span>
+        
+                    </div>
+        
+                    <div class="project-links">
+        
+                        <a
+                            href="https://github.com/YOUR_USERNAME/churn-project"
+                            target="_blank">
+                            GitHub
+                        </a>
+        
+                    </div>
+        
+                </article>
+        
+            </div>
+        
+        </section>
+        ```
 
-                    <li>
-                        Built a similarity-based recommendation
-                        approach using customer and transaction data.
-                    </li>
-
-                    <li>
-                        Developed a fallback strategy based on
-                        location and best-selling products.
-                    </li>
-
-                    <li>
-                        Built a Streamlit application to expose the
-                        recommendations.
-                    </li>
-
-                    <li>
-                        Containerized the application using Docker.
-                    </li>
-
-                    <li>
-                        Designed an AWS architecture involving
-                        S3, Lambda, ECR and EventBridge.
-                    </li>
-
-                </ul>
-
-                <div class="tech-stack">
-
-                    <span class="tech">Python</span>
-                    <span class="tech">Machine Learning</span>
-                    <span class="tech">Streamlit</span>
-                    <span class="tech">Docker</span>
-                    <span class="tech">AWS</span>
-                    <span class="tech">S3</span>
-                    <span class="tech">Lambda</span>
-                    <span class="tech">ECR</span>
-                    <span class="tech">EventBridge</span>
-
-                </div>
-
-                <div class="project-links">
-
-                    <!-- CHANGE THIS TO YOUR REAL GITHUB REPOSITORY -->
-
-                    <a
-                        href="https://github.com/YOUR_USERNAME/reactiva"
-                        target="_blank">
-                        GitHub
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            ```html
-<!-- PROJECT 2 -->
-
-    <article class="project-card">
-    
-        <h3>Customer Churn Prediction</h3>
-    
-        <p>
-            Machine learning project focused on predicting customer churn
-            and evaluating whether historical customer behavior could
-            provide enough information to identify customers at risk of
-            leaving.
-        </p>
-    
-        <ul>
-    
-            <li>
-                Performed data preprocessing and exploratory analysis
-                to identify relevant patterns and variables.
-            </li>
-    
-            <li>
-                Built and evaluated machine learning models for churn
-                prediction.
-            </li>
-    
-            <li>
-                Used Optuna for hyperparameter optimization.
-            </li>
-    
-            <li>
-                Used MLflow to track experiments, parameters and model
-                performance.
-            </li>
-    
-            <li>
-                Deployed the model through a Streamlit application for
-                interactive predictions.
-            </li>
-    
-            <li>
-                Evaluation showed that the model did not achieve the
-                predictive performance required for reliable deployment.
-            </li>
-    
-        </ul>
-    
-        <div class="tech-stack">
-    
-            <span class="tech">Python</span>
-            <span class="tech">Machine Learning</span>
-            <span class="tech">Scikit-learn</span>
-            <span class="tech">Optuna</span>
-            <span class="tech">MLflow</span>
-            <span class="tech">Streamlit</span>
-            <span class="tech">Pandas</span>
-    
-        </div>
-    
-        <div class="project-links">
-    
-            <!-- CHANGE THIS TO YOUR REAL GITHUB REPOSITORY -->
-    
-            <a
-                href="https://github.com/YOUR_USERNAME/churn-project"
-                target="_blank">
-                GitHub
-            </a>
-    
-        </div>
-    
-    </article>
-    ```
 
 
 
