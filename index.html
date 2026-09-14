@@ -1,10 +1,622 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Jesus Elias</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jesus Elias | Data & ML Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of Jesus Elias, Industrial Engineer transitioning into Data Science, Data Analytics and Machine Learning.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.05rem;
+            color: #4b5563;
+        }
+
+        /* SKILLS */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 10px 17px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.95rem;
+        }
+
+        /* PROJECTS */
+
+        #projects {
+            background: #eef2f7;
+        }
+
+        .projects-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .project-card p {
+            color: #6b7280;
+            margin-bottom: 18px;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tech {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            margin-top: auto;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 9px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            background: #111827;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .project-links a:hover {
+            background: #374151;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact p {
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hi, I'm Jesus Elias 👋</h1>
-    <p>Data Science | Machine Learning | MLOps</p>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">Jesus Elias</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>Jesus Elias</h1>
+
+            <h2>
+                Industrial Engineer | Data Analyst | Machine Learning
+            </h2>
+
+            <p>
+                Industrial Engineer transitioning into Data Science and
+                Machine Learning, with hands-on experience building
+                data-driven solutions and deploying machine learning
+                applications.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/jesuselias/"
+                    target="_blank"
+                    class="btn btn-secondary">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am an Industrial Engineer developing my career in
+                Data Analytics, Data Science and Machine Learning.
+                My background combines analytical thinking, process
+                improvement and customer-facing experience with
+                modern data and cloud technologies.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy building complete solutions — from data
+                processing and machine learning models to APIs,
+                applications and cloud deployment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">R</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Scikit-learn</span>
+            <span class="skill">Optuna</span>
+            <span class="skill">MLflow</span>
+            <span class="skill">Streamlit</span>
+            <span class="skill">FastAPI</span>
+            <span class="skill">Docker</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Amazon S3</span>
+            <span class="skill">AWS Lambda</span>
+            <span class="skill">Amazon ECR</span>
+            <span class="skill">EventBridge</span>
+            <span class="skill">Snowflake</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-container">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <h3>ReActiva</h3>
+
+                <p>
+                    Machine learning recommendation system designed
+                    to generate personalized product recommendations
+                    based on customer behavior and contextual
+                    characteristics.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Built a similarity-based recommendation
+                        approach using customer and transaction data.
+                    </li>
+
+                    <li>
+                        Developed a fallback strategy based on
+                        location and best-selling products.
+                    </li>
+
+                    <li>
+                        Built a Streamlit application to expose the
+                        recommendations.
+                    </li>
+
+                    <li>
+                        Containerized the application using Docker.
+                    </li>
+
+                    <li>
+                        Designed an AWS architecture involving
+                        S3, Lambda, ECR and EventBridge.
+                    </li>
+
+                </ul>
+
+                <div class="tech-stack">
+
+                    <span class="tech">Python</span>
+                    <span class="tech">Machine Learning</span>
+                    <span class="tech">Streamlit</span>
+                    <span class="tech">Docker</span>
+                    <span class="tech">AWS</span>
+                    <span class="tech">S3</span>
+                    <span class="tech">Lambda</span>
+                    <span class="tech">ECR</span>
+                    <span class="tech">EventBridge</span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <!-- CHANGE THIS TO YOUR REAL GITHUB REPOSITORY -->
+
+                    <a
+                        href="https://github.com/YOUR_USERNAME/reactiva"
+                        target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <h3>Invoice OCR & Document Processing</h3>
+
+                <p>
+                    Computer vision and OCR project focused on
+                    extracting structured information from invoices
+                    and converting document images into usable data.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Uses OCR to extract text from invoice images.
+                    </li>
+
+                    <li>
+                        Processes image-based documents using Python.
+                    </li>
+
+                    <li>
+                        Designed as the foundation for automated
+                        invoice data extraction.
+                    </li>
+
+                    <li>
+                        Future stages can add document understanding,
+                        validation and structured data extraction.
+                    </li>
+
+                </ul>
+
+                <div class="tech-stack">
+
+                    <span class="tech">Python</span>
+                    <span class="tech">OCR</span>
+                    <span class="tech">Tesseract</span>
+                    <span class="tech">Pytesseract</span>
+                    <span class="tech">Computer Vision</span>
+                    <span class="tech">Document AI</span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <!-- CHANGE THIS TO YOUR REAL GITHUB REPOSITORY -->
+
+                    <a
+                        href="https://github.com/YOUR_USERNAME/invoice-ocr"
+                        target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="contact">
+
+            <p>
+                I am currently interested in opportunities related to
+                Data Analytics, Data Science, Machine Learning and
+                AI.
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://www.linkedin.com/in/jesuselias/"
+                    target="_blank">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/YOUR_USERNAME"
+                    target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Jesus Elias. Built with HTML and CSS.
+        </p>
+
+    </footer>
+
 </body>
 </html>
+```
